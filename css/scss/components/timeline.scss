@@ -1,0 +1,128 @@
+.timeline {
+  position: relative;
+  overflow: hidden;
+  padding-top: 10px;
+  @include spacing;
+  // padding-bottom: 10vh;
+  background-color: $primary;
+  padding-right: $indent-right;
+  @include breakpoint(s) {
+    padding-right: $indent-right * 1.25;
+  }
+  @include breakpoint(m) {
+    padding-right: $indent-right * 2;
+  }
+
+  @include breakpoint(l) {
+    padding-left: 12.25vw;
+    padding-right: 12.25vw;
+  }
+  @include breakpoint(xl) {
+    padding-left: 17.5vw;
+    padding-right: 17.5vw;
+  }
+  @include breakpoint(xxl) {
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
+  &__item {
+    padding-left: 50px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    width: 100%;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    &:before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: $white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(calc(-50% - 1px), -50%);
+    }
+    p {
+      opacity: 100%;
+    }
+    @include breakpoint(l) {
+      margin-left: auto;
+      width: calc(50% + 1px);
+      padding-bottom: 20px;
+    }
+    &--last-item {
+      padding-bottom: 10vh;
+      &:before {
+        content: none;
+      }
+    }
+    &--mirrored {
+      @include breakpoint(l) {
+        margin-left: auto;
+        border-left: none;
+        border-right: 2px solid rgba(255, 255, 255, 0.2);
+        margin-right: auto;
+        margin-left: 0;
+        padding-right: 50px;
+        align-items: flex-end;
+
+        p {
+          text-align: right;
+        }
+
+        &:before {
+          right: 0;
+          left: auto;
+          transform: translate(calc(50% + 1px), calc(-50% + 1px));
+        }
+      }
+    }
+  }
+  &__additive {
+    position: absolute;
+    opacity: 20%;
+    height: 60vw;
+    @include breakpoint(s) {
+      height:50vw;
+    }
+    @include breakpoint(m) {
+      height: 45vw;
+      max-height:30%;
+      opacity: 10%;
+    }
+    &--form {
+      right: -36%;
+      top: 34%;
+      @include breakpoint(s) {
+        right: -15%;
+        top: 20%;
+      }
+      @include breakpoint(m) {
+        right: -5%;
+      }
+      @include breakpoint(xl) {
+        top: 10%;
+      }
+    }
+    &--schoen {
+      left: -20%;
+      bottom: 34%;
+      @include breakpoint(s) {
+        left: -10%;
+        bottom: 30%;
+      }
+      @include breakpoint(m) {
+        left: -15%;
+        bottom: 20%;
+      }
+      @include breakpoint (xl) {
+        left: -8%;
+        bottom: 10%;
+      }
+
+    }
+  }
+}

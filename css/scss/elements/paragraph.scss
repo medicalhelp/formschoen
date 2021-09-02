@@ -1,0 +1,15 @@
+.paragraph {
+  @include font-secondary;
+  @include text-p;
+  @include colorModifier;
+  &--small {
+    @include text-p-small;
+  }
+  &--big {
+    @include text-lead;
+  }
+  &--narrow {
+    @include text-p-narrow;
+
+  }
+}

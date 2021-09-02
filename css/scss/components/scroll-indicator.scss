@@ -1,0 +1,14 @@
+.scroll-indicator {
+    background-color: $highlight;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vh;
+  }
+  .scroll {
+    opacity: 1;
+    @include breakpoint(l) {
+      letter-spacing: 3px;
+    }
+  }
+  

@@ -1,0 +1,40 @@
+.footer {
+    @include spacing;
+    background-color: $primary;
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+    &__list {
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+      display: flex;
+      flex-direction: column;
+      @include breakpoint(xl) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 12vh;
+        padding-bottom: 11vw;
+      }
+      @include breakpoint(xxl) {
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+    }
+    &__impressum {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 5vh;
+      &--margin-bottom {
+        padding-bottom: 10vh;
+      }
+      &--contact {
+        padding-bottom: 4vh;
+        padding-top: 4vh;;
+      }
+    }
+    &__link {
+      text-decoration: none;
+    }
+  }
+  

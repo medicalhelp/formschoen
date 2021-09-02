@@ -1,0 +1,31 @@
+.logo {
+  width: 10vw;
+  display: inline-block;
+  height: 44px;
+  position: absolute;
+  top: 42px;
+  z-index: 10;
+  padding-left: $spacing-left;
+  width: fit-content;
+  @include breakpoint(s) {
+    top: 72px;
+  }
+  &__link {
+    height: inherit;
+    display: flex;
+    align-items: center;
+  }
+  &__svg {
+    stroke: none;
+    height: 75%;
+    @include breakpoint(m) {
+      height: 100%;
+    }
+    &--cd-white {
+      fill: $white;
+    }
+    &--cd-black {
+      fill: $black;
+    }
+  }
+}

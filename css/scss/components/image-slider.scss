@@ -1,0 +1,67 @@
+.image-slider {
+  // padding-left: $spacing-left;
+
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $secondary;
+  font-size: 15vw;
+  &__item {
+    width: 20vw;
+    min-height: 60vw !important;
+    margin-left: $spacing-left;
+    @include breakpoint(xl) {
+      min-height: 40vw !important;
+    }
+    &--gutter-left {
+      margin-left: $spacing-left;
+    }
+  }
+  &__container {
+    width: 100%;
+    background-color: $secondary;
+  }
+  &__img {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    object-fit: cover;
+  }
+  &__btn-container {
+    @include spacing;
+    display: flex;
+    margin-top: 30px;
+  }
+
+  &__btn-back {
+    @include btn;
+    margin-right: 24px;
+    &:hover {
+      background-color: $highlight;
+      border: 1px solid $highlight;
+      fill: $black;
+      transition: all 0.3s ease;
+    }
+  }
+  &__btn-forward {
+    @include btn;
+    &:hover {
+      background-color: $highlight;
+      border: 1px solid $highlight;
+      fill: $black;
+      transition: all 0.3s ease;
+    }
+  }
+  &__btn--white {
+    fill: $white;
+  }
+}
+
+.slick-slide {
+  width: 75vw;
+  height: 30vw;
+}
+
+.slick-disabled {
+  opacity: 20%;
+  pointer-events: none;
+}

@@ -1,0 +1,100 @@
+.quote-slider {
+  &__skyline {
+    margin-left: $spacing-left;
+    @include breakpoint(m) {
+      margin-left: $indent-left;
+    }
+    margin-bottom: 75px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-left: $spacing-left;
+    margin-right: $spacing-right;
+    @include breakpoint(m) {
+      margin-right: $indent-left * 1.4;
+      margin-left: $indent-right;
+    }
+  }
+  &__skyline-br {
+    @include breakpoint(s) {
+      display: none;
+    }
+  }
+  &__container {
+    width: 100%;
+    background-color: $primary;
+    &--bg-highlight {
+      background-color: $highlight;
+    }
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    @include breakpoint(s) {
+      padding-top: 25vh;
+      padding-bottom: 25vh;
+    }
+  }
+  &__btn-container {
+    padding-left: $spacing-left;
+    padding-right: $spacing-right;
+    @include breakpoint(m) {
+      padding-left: $indent-left;
+      padding-right: $indent-right;
+    }
+    display: flex;
+    margin-top: 60px;
+  }
+  p {
+    margin-bottom: 3vh;
+    @include breakpoint(s) {
+      margin-bottom: 2.5vh;
+    }
+  }
+  &__btn-back {
+    @include btn;
+    margin-right: 24px;
+    &--white {
+      border: 1px solid $white;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: $highlight;
+        border: 1px solid $highlight;
+        fill: $black;
+      }
+    }
+    &--hover-white {
+      &:hover {
+        background-color: $primary;
+        border: 1px solid $primary;
+        fill: $black;
+      }
+    }
+  }
+  &__btn-forward {
+    @include btn;
+    &--white {
+      border: 1px solid $white;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: $highlight;
+        border: 1px solid $highlight;
+        fill: $black;
+      }
+    }
+    &--hover-white {
+      &:hover {
+        background-color: $primary;
+        border: 1px solid $primary;
+        fill: $black;
+      }
+    }
+  }
+  &__btn--white {
+    fill: $white;
+  }
+}
+
+.slick-slide {
+  width: 75vw;
+  height: 30vw;
+}

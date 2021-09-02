@@ -1,0 +1,32 @@
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  @include breakpoint(s) {
+    margin-top: 110px;
+  }
+  transition: all 0.3s ease;
+  &__content {
+    color: $white;
+    padding: 15px 30px;
+    border-radius: 100px;
+    border: 1px solid $white;
+    &:hover {
+      border: 1px solid $highlight;
+    }
+    // background-color: $white;
+    background-color: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    @include font-secondary;
+    @include text-p-small;
+    @include breakpoint(l) {
+      padding: 20px 40px;
+    }
+
+    &:hover {
+      background-color: $highlight;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.text {
+  @include bgColorModifier;
+  @include spacing;
+  @include breakpoint(l) {
+    padding-left: $indent-left;
+    padding-right: $indent-right;
+  }
+  @include breakpoint(xl) {
+    padding-right: $indent-right * 1.5;
+  }
+
+  $height: 10;
+
+  @mixin height {
+    @for $i from 1 through $height {
+      &--height-#{$i*5} {
+        padding-top: $i * 5vh;
+        padding-bottom: $i * 5vh;
+        @include breakpoint(xxl) {
+          padding-top: $i * 8vh;
+          padding-bottom: $i * 8vh;
+        }
+      }
+      &--bottom-#{$i*5} {
+        padding-bottom: $i * 5vh;
+        @include breakpoint(xxl) {
+          padding-bottom: $i * 8vh;
+        }
+      }
+    }
+  }
+
+  $bottom: 100;
+  @mixin bottom {
+    @for $i from 0 through $bottom {
+      &--bottom-#{$i} {
+        padding-bottom: $i * 1vh;
+        @include breakpoint(xxl) {
+          padding-bottom: $i * 1vh;
+        }
+      }
+    }
+  }
+  $top: 100;
+  @mixin top {
+    @for $i from 0 through $top {
+      &--top-#{$i} {
+        padding-top: $i * 1vh;
+        @include breakpoint(xxl) {
+          padding-top: $i * 1vh;
+        }
+      }
+    }
+    &--pos-relative {
+      position: relative;
+    }
+  }
+
+
+  @include height;
+  @include top;
+  @include bottom;
+}

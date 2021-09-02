@@ -1,0 +1,23 @@
+body {
+    background-color: #C0472C;
+  }
+  @import "globals/breakpoint";
+  @import "globals/mixin";
+  @import "globals/fonts";
+  @import "globals/font-faces";
+  @import "globals/font-sizes";
+  @import "globals/colors";
+  @import "globals/spacing";
+  
+  *,
+  body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  

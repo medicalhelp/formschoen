@@ -1,0 +1,39 @@
+.social-icons {
+  &__item {
+    margin-right: 4vw;
+    transition: all 0.3s ease;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include breakpoint(s) {
+      margin-right: 2vw;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @include breakpoint(xl) {
+      margin-right:1.15vw;
+    }
+    &:hover {
+      opacity: 60%;
+    }
+  }
+  &__svg {
+    width: 24px;
+    @include breakpoint(s) {
+      width: 24px;
+    }
+    @include breakpoint(l) {
+      width: 28px;
+    }
+    &--small {
+      width: 24px;
+      @include breakpoint(s) {
+        width: 24px;
+      }
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.headline-h2 {
+  @include font-primary;
+  @include text-h1;
+  @include colorModifier;
+
+  strong {
+    @include font-secondary;
+    font-weight: normal;
+  }
+  &--big {
+    @include text-h2-big;
+  }
+  &--centered {
+    text-align: center;
+  }
+}

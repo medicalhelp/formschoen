@@ -1,0 +1,13 @@
+.headline-hero {
+  @include font-primary;
+  @include text-hero;
+  @include colorModifier;
+  text-align: center;
+  strong {
+    @include font-secondary;
+    font-weight: normal;
+  }
+  &--left {
+    text-align: left;
+  }
+}

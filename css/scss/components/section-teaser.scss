@@ -1,0 +1,29 @@
+.section-teaser {
+    background-color: $black;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(l) {
+      height: 100vh;
+    }
+    &__background {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+    }
+    &--corner {
+      @include border-radius;
+    }
+  }
+  

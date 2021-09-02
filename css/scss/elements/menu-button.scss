@@ -1,0 +1,33 @@
+.menu-button {
+  display: inline-block;
+  color: $black;
+  padding: 15px 30px;
+  border-radius: 100px;
+  border: none;
+  background-color: $secondary;
+  text-decoration: none;
+  @include font-secondary;
+  @include font-spec(14px, 1, 4px);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &__container {
+    position: fixed;
+    top: 42px;
+    @include breakpoint(s) {
+      top: 72px;
+    }
+    z-index: 3;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    @include spacing;
+    &--close {
+      position: sticky;
+    }
+  }
+  &:hover {
+    background-color: #EFEEE7;
+  }
+}

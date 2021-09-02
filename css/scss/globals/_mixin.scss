@@ -1,0 +1,40 @@
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin border-radius {
+  $border-radius: 40px;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+@mixin btn {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  padding: 14px;
+  border: 1px solid $black;
+  border-radius: 100%;
+  align-self: flex-end;
+  @include breakpoint(l) {
+    width: 72px;
+    height: 72px;
+    padding: 20px;
+  }
+}
+
+// $columns: 100;
+
+// @mixin height {
+//   @for $i from 1 through $columns {
+//       &--height-#{$i} { height: $i*10 + vh}
+//   }
+// }

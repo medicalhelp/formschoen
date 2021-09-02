@@ -1,0 +1,33 @@
+.info {
+    color: white;
+    &__additive {
+      margin-bottom: 10px;
+      display: flex;
+      :first-child {
+        margin-right: 1.5rem;
+      }
+    }
+    &__paragraph {
+      display: inline-block;
+      margin-bottom: 1rem;
+      &--no-spacing {
+        margin-bottom: 0px;
+      }
+    }
+    &__paragraph-link {
+      text-decoration: none;
+      text-transform: none;
+      color: $white;
+      &:hover {
+        color: $highlight;
+      }
+    }
+    &--margin-bottom {
+      margin-bottom: 8vh;
+    }
+    &__contact-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  

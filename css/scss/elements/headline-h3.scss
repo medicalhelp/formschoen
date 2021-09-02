@@ -1,0 +1,11 @@
+.headline-h3 {
+  @include font-primary;
+  @include text-h2;
+  @include colorModifier;
+  display: inline-block;
+
+  strong {
+    @include font-secondary;
+    font-weight: normal;
+  }
+}

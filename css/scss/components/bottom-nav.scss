@@ -1,0 +1,27 @@
+.bottom-nav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: $white;
+  padding: 2vh 0;
+  display: flex;
+  z-index: 500;
+  justify-content: space-between;
+  border-top: 1px solid $black;
+  @include spacing;
+  @include breakpoint(l) {
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    padding-left: 30vw;
+    padding-right: 30vw;
+  }
+  &__item {
+    color: $black;
+    text-decoration: none;
+    @include font-secondary;
+    @include text-p;
+    &:hover {
+      color: $highlight;
+    }
+  }
+}

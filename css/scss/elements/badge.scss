@@ -1,0 +1,51 @@
+.badge {
+  $size-s: 150px;
+  $size-l: 200px;
+  height: $size-s;
+  width: $size-s;
+  @include breakpoint(l) {
+    height: $size-l;
+    width: $size-l;
+  }
+  position: absolute;
+  &__container {
+    position: relative;
+  }
+  &__link {
+    height: $size-s;
+    width: $size-s;
+    position: absolute;
+    transform: translate(35%, -110%);
+    transition: all 0.3s ease;
+    @include breakpoint(s) {
+      transform: translate(100%, -100%);
+    }
+    @include breakpoint(m) {
+      transform: translate(150%, -90%);
+    }
+    @include breakpoint(l) {
+      width: $size-l;
+      height: $size-l;
+      top: 0vh;
+      right: 0vw;
+      transform: translate(50%, -50%);
+    }
+    &:hover {
+      opacity: 65%;
+    }
+  }
+  &__jubilaeum {
+    height: $size-s;
+    width: $size-s;
+    position: absolute;
+    transform: translate(115%, -60%);
+    right: 50%;
+    @include breakpoint(l) {
+      width: $size-l;
+      height: $size-l;
+      top: -5vh;
+      right: 0vw;
+      transform: translate(50%, -50%);
+    }
+  }
+}

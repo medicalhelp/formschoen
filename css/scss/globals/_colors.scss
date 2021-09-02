@@ -1,0 +1,46 @@
+$primary: #212A3B;
+$secondary: #E0DDD0;
+$highlight: #C0472C;
+$white: #ffffff;
+$black: #000000;
+$matte-black: #1f1f1f;
+
+@mixin colorModifier {
+    &--cd-primary {
+      color: $primary;
+    }
+    &--cd-secondary {
+      color: $secondary;
+    }
+    &--cd-highlight {
+      color: $highlight;
+    }
+    &--cd-white {
+      color: $white;
+    }
+    &--cd-black {
+      color: $black;
+    }
+    &--cd-matte-black {
+      color: $matte-black;
+    }
+  }
+  
+  @mixin bgColorModifier {
+    &--bg-primary {
+      background-color: $primary;
+    }
+    &--bg-secondary {
+      background-color: $secondary;
+    }
+    &--bg-highlight {
+      background-color: $highlight;
+    }
+    &--bg-white {
+      background-color: $white;
+    }
+    &--bg-black {
+      background-color: $black;
+    }
+  }
+  

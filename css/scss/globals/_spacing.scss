@@ -1,0 +1,17 @@
+$spacing-left: 10vw;
+$spacing-right: 10vw;
+$indent-left: 20vw;
+$indent-right: 20vw;
+
+@mixin spacing {
+  padding-left: $spacing-left;
+  padding-right: $spacing-right;
+}
+@mixin indent {
+  &--indent-left {
+    padding-left: $indent-left;
+  }
+  &--indent-right {
+    padding-right: 40vw;
+  }
+}

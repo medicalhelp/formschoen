@@ -1,0 +1,28 @@
+.map {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    opacity: 100%;
+  }
+  &__notification {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0%;
+    z-index: 2;
+    transition: all 0.3s ease;
+    &:hover {
+      opacity: 100%;
+    }
+  }
+}

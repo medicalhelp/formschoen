@@ -1,0 +1,38 @@
+.stage-detail {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  @include bgColorModifier;
+  &__content {
+    @include spacing;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-bottom: 15vh;
+    z-index: 1;
+    @include breakpoint(l) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  &__headline {
+    @include breakpoint(l) {
+      width: 100%;
+    }
+  }
+  &__description {
+    width: 40%;
+  }
+  &__break {
+    @include breakpoint(l) {
+      display: none;
+    }
+  }
+}

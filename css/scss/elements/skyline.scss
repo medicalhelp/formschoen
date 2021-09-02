@@ -1,0 +1,22 @@
+.skyline {
+  display: inline-block;
+  @include font-secondary;
+  @include text-title;
+  @include colorModifier;
+  margin-bottom: 45px;
+  &--transparency {
+    opacity: 75%;
+  }
+  &--spacing {
+    margin-bottom: 55px;
+  }
+  &--spacing-none {
+    margin-bottom: 0;
+  }
+  &--hover {
+    &:hover {
+      text-decoration: none;
+      color: $highlight;
+    }
+  }
+}

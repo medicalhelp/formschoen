@@ -1,0 +1,28 @@
+.headline {
+  display: flex;
+  flex-direction: column;
+  @include bgColorModifier;
+  @include spacing;
+  @include breakpoint(l) {
+    padding-left: $indent-left;
+    padding-right: $indent-right;
+  }
+  @include breakpoint(xl) {
+    padding-right: $indent-right * 1.5;
+  }
+  $height: 10;
+
+  @mixin height {
+    @for $i from 1 through $height {
+      &--height-#{$i*5} {
+        padding-top: $i * 5vh;
+        padding-bottom: $i * 5vh;
+        @include breakpoint(xxl) {
+          padding-top: $i * 8vh;
+          padding-bottom: $i * 8vh;
+        }
+      }
+    }
+  }
+  @include height;
+}
